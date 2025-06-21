@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Klasifikasi Nilai Kontrak</title>
+</head>
+<body>
+    <h2>Form Prediksi Kategori Kontrak</h2>
+    <form method="POST">
+        <label>Uraian Pekerjaan:</label><br>
+        <textarea name="uraian" required></textarea><br><br>
+
+        <label>Pelaksana:</label><br>
+        <input type="text" name="pelaksana" required><br><br>
+
+        <label>Nilai Kontrak (Rp):</label><br>
+        <input type="number" name="nilai" required><br><br>
+
+        <label>Jangka Waktu (hari):</label><br>
+        <input type="number" name="waktu" required><br><br>
+
+        <input type="submit" value="Prediksi">
+    </form>
+
+    {% if hasil %}
+        <h3>Hasil Prediksi: {{ hasil }}</h3>
+    {% endif %}
+</body>
+</html>
